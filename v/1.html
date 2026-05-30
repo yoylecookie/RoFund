@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rofund</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Onion">
+  <meta name="description" content="Welcome to Rofund! The new alternative to pls donate after the recent roblox updates">
+
+  <meta property="og:title" content="Rofund">
+  <meta property="og:description" content="Welcome to Rofund! The new alternative to pls donate after the recent roblox updates">
+  <meta property="og:url" content="/index.html">
+  <meta property="og:site_name" content="Rofund">
+
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    input, button {
+      margin: 5px;
+      padding: 8px;
+    }
+
+    #output {
+      margin-top: 20px;
+      word-break: break-all;
+    }
+  </style>
+
+  <link rel="icon" type="image/png" href="https://yoylecookie.github.io/yoylecookie/logos-rbxfnd.png">
+</head>
+
+<body>
+  <img src="https://yoylecookie.github.io/yoylecookie/Rofund-logos-full-2.png" width="350">
+  <br>
+
+  <input placeholder="enter donation code" id="placeid">
+  <button onclick="donate()">GO</button>
+
+  <br>
+
+  <a id="output" target="_blank"></a>
+
+  <script>
+    function donate() {
+      const donation = document.getElementById("placeid").value;
+
+      const url =
+        "https://www.roblox.com/games/" +
+        donation
+
+      document.getElementById("output").href = url;
+      document.getElementById("output").innerText = url;
+    }
+  </script>
+</body>
+</html>
